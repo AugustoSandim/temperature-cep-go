@@ -4,7 +4,8 @@ Este é um sistema em Go que recebe um CEP, identifica a cidade e retorna o clim
 
 ## Para acessar a aplicação
 
-Acesse a URL: `https://temperature-cep-go-359560015617.us-central1.run.app/temperature?cep=01001000` (substitua `01001000` pelo CEP desejado).
+Acesse a URL:  https://temperature-cep-go-359560015617.us-central1.run.app/temperature?cep=01001000
+(substitua `01001000` pelo CEP desejado).
 
 ## Requisitos
 
