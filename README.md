@@ -2,17 +2,21 @@
 
 Este é um sistema em Go que recebe um CEP, identifica a cidade e retorna o clima atual (temperatura em graus celsius, fahrenheit e kelvin).
 
+## Para acessar a aplicação
+
+Acesse a URL: `https://temperature-cep-go-359560015617.us-central1.run.app/temperature?cep=01001000` (substitua `01001000` pelo CEP desejado).
+
 ## Requisitos
 
-*   Docker
-*   Docker Compose
-*   Google Cloud SDK
+- Docker
+- Docker Compose
+- Google Cloud SDK
 
 ## Como executar localmente
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/temperature-cep-go.git
+    git clone https://github.com/AugustoSandim/temperature-cep-go.git
     cd temperature-cep-go
     ```
 2.  **Build e execução com Docker Compose:**
@@ -21,11 +25,11 @@ Este é um sistema em Go que recebe um CEP, identifica a cidade e retorna o clim
     ```
 3.  **Acessando a aplicação:**
     Abra o seu navegador ou utilize uma ferramenta como o `curl` para testar:
-    *   **CEP válido:** `curl http://localhost:8080/temperature?cep=01001000`
-    *   **CEP inválido:** `curl http://localhost:8080/temperature?cep=123`
-    *   **CEP não encontrado:** `curl http://localhost:8080/temperature?cep=99999999`
+    - **CEP válido:** `curl http://localhost:8080/temperature?cep=01001000`
+    - **CEP inválido:** `curl http://localhost:8080/temperature?cep=123`
+    - **CEP não encontrado:** `curl http://localhost:8080/temperature?cep=99999999`
 
-## Deploy no Google Cloud Run
+## Deploy no Google Cloud Run pelo Terminal
 
 Para fazer o deploy da aplicação no Google Cloud Run, siga estes passos:
 
