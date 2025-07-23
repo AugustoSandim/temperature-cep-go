@@ -49,13 +49,14 @@ func getLocationByCEP(cep string) (string, error) {
 		return "", err
 	}
 
+	var viaCEPErrorResponse model.ViaCEPErrorResponse
+	if err := json.Unmarshal(body, &viaCEPErrorResponse); err == nil && viaCEPErrorResponse.Erro == "true" {
+		return "", fmt.Errorf("can not find zipcode")
+	}
+
 	var viaCEPResponse model.ViaCEPResponse
 	if err := json.Unmarshal(body, &viaCEPResponse); err != nil {
 		return "", err
-	}
-
-	if viaCEPResponse.Erro {
-		return "", fmt.Errorf("can not find zipcode")
 	}
 
 	return viaCEPResponse.Localidade, nil

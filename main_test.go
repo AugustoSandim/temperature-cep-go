@@ -16,7 +16,7 @@ func TestGetTemperature(t *testing.T) {
 		cep := r.URL.Path[len("/ws/") : len(r.URL.Path)-len("/json/")]
 		if cep == "99999999" {
 			w.WriteHeader(http.StatusOK)
-			w.Write([]byte(`{"erro": true}`))
+			w.Write([]byte(`{"erro": "true"}`))
 			return
 		}
 		w.WriteHeader(http.StatusOK)

@@ -11,6 +11,10 @@ type ViaCEPResponse struct {
 	Localidade string `json:"localidade"`
 }
 
+type ViaCEPErrorResponse struct {
+	Erro string `json:"erro"`
+}
+
 type WeatherAPIResponse struct {
 	Current struct {
 		TempC float64 `json:"temp_c"`
